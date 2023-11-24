@@ -23,18 +23,19 @@ def main():
 
 
     # fonction d'importation des données
-    @st.cache_data(persist=True)
-    def load_data():
-        data = pd.read_csv('Expresso_churn_dataset.csv')
-        return data
+    #@st.cache_data(persist=True)
+    #def load_data():
+        #data = pd.read_csv('Expresso_churn_dataset.csv')
+        #return data
     # Affichage de la table de données
-    df = load_data()
-    df_sample = df.sample(100)
+    #df = load_data()
+    #df_sample = df.sample(100)
     # Creation des variables
-    Variables = st.sidebar.write(
-        "PARAMETRES DE PREDICTION",
-    )
+    #Variables = st.sidebar.write(
+        #"PARAMETRES DE PREDICTION",
+    #)
     # paramètres de prediction
+    Variables = st.sidebar.write("PARAMETRES DE PREDICTION")
     Freq = st.sidebar.number_input("Choisir la fréquence de rechargement mensuelle du client",
             0,100, step=1)
     Anc = st.sidebar.number_input("Choisir l'Anciennété sur le reséau (en mois) du client", 1,100, step=2)
